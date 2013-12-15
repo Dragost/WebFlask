@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <div class="box">
+    <h2>Contacto</h2>
+
+    {% if exito %}
+      <div class="success">Gracias por su mensaje, <strong>{{nombre}}</strong>.</div>
+    {% else %}
+      {% for mensaje in form.nombre.errors %}
+        <div class="error">{{ mensaje }}</div>
+      {% endfor %}
+
+      {% for mensaje in form.email.errors %}
+        <div class="error">{{ mensaje }}</div>
+      {% endfor %}
+
+      {% for mensaje in form.asunto.errors %}
+        <div class="error">{{ mensaje }}</div>
+      {% endfor %}
+
+      {% for mensaje in form.mensaje.errors %}
+        <div class="error">{{ mensaje }}</div>
+      {% endfor %}
+
+      <div class="formbox">
+        <form action="{{ url_for('contact') }}" method=post>
+          {{ form.hidden_tag() }}
+
+          {{ form.nombre.label }}
+          {{ form.nombre }}
+
+          {{ form.email.label }}
+          {{ form.email }}
+
+          {{ form.asunto.label }}
+          {{ form.asunto }}
+
+          {{ form.mensaje.label }}
+          {{ form.mensaje }}
+
+          {{ form.enviar }}
+        </form>
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}

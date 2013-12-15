@@ -1,0 +1,263 @@
+body {
+  font-family: 'Arial', sans-serif;
+  color: #737373;
+  background: #e6e6e6;
+}
+
+a {
+  text-decoration: none;
+}
+
+p, h1, h2, h3 {
+  margin: 0;
+}
+
+label {
+  display: block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* GENERAL */
+.error {
+  width: 280px;
+  margin: 15px auto 0;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  background: #db4437;
+}
+
+.box {
+  margin-top: 15px;
+  padding: 15px;
+  background: white;
+  border-radius: 6px;
+}
+  .box .error {
+    margin: 10px 0;
+    text-align: left;
+  }
+  .box .success {
+    width: 300px;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: left;
+    color: #fff;
+    border-radius: 5px;
+    background: #3abf8b;
+  }
+  .box h2 {
+    padding: 5px;
+    border-radius: 6px;
+    color: #fff;
+    background: #3abf8b;
+  }
+  .box ul {
+    margin-top: 15px;
+  }
+    .box ul li {
+      margin-bottom: 10px;
+      padding: 8px;
+      font-size: 1.2em;
+      border-radius: 5px;
+      background: #f3f3f3;
+    }
+    .box ul li:last-child {
+      margin: 0;
+    }
+  .box ul li a {
+    font-size: 0.8em;
+    font-style: italic;
+    color: #4285f4;
+  }
+  .box .formbox {
+    margin-top: 15px;
+  }
+  .box .formbox input {
+    width: 248px;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 1em;
+    border-radius: 3px;
+    border: 0;
+    color: #737373;
+    background: #f0f0f0;
+  }
+  .box .formbox input[type="submit"] {
+    display: block;
+    width: 100px;
+    margin-bottom: 0;
+    font-size: 1em;
+    color: #fff;
+    background: #3abf8b;
+  }
+    .box .formbox input[type="submit"]:hover {
+      background: #0f9d58;
+    }
+  .box .formbox textarea {
+    width: 600px;
+    height: 100px;
+    margin-bottom: 5px;
+    padding: 5px;
+    font-size: 1em;
+    border-radius: 3px;
+    border: 0;
+    color: #737373;
+    background: #f0f0f0;
+  }
+
+/* LAYOUT */
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  display: block;
+  width: 300px;
+  margin: auto;
+  padding: 8px;
+  font-size: 3em;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 6px;
+  background: #4285f4;
+}
+  .title a {
+    color: #fff;
+  }
+
+.menu {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  background: #f6bf00;
+}
+  .menu li {
+    display: inline;
+    margin-right: 10px;
+  }
+    .menu li.exit {
+      float: right;
+    }
+    .menu li a {
+      color: #2f2f2f;
+    }
+      .menu li a:hover {
+        text-decoration: underline;
+      }
+
+/* HOME/LOGIN */
+.loginbox {
+  width: 260px;
+  padding: 20px;
+  margin: 15px auto 0;
+  border-radius: 5px;
+  background: #ccc;
+}
+  .loginbox input {
+    width: 248px;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 1em;
+    border-radius: 3px;
+    border: 0;
+    color: #737373;
+    background: #f0f0f0;
+  }
+  .loginbox input[type="submit"] {
+    width: 100px;
+    margin-bottom: 0;
+    font-size: 1em;
+    color: #fff;
+    background: #3abf8b;
+  }
+    .loginbox input[type="submit"]:hover {
+      background: #0f9d58;
+    }
+
+.register {
+  width: 280px;
+  margin: 15px auto 0;
+  padding: 10px;
+  margin: 15px auto 0;
+  border-radius: 5px;
+  background: #f4b400;
+  font-size: 1.2em;
+  text-align: center;
+}
+  .register:hover {
+    background: #ddac00;
+  }
+  .register a {
+    color: #fff;
+  }
+
+/* ABOUT */
+.aboutbox {}
+  .aboutbox p {
+    margin-top: 15px;
+  }
+
+/* REGISTER */
+.registerbox {
+  width: 320px;
+  padding: 20px;
+  margin: 15px auto 0;
+  border-radius: 5px;
+  background: #ccc;
+}
+  .registerbox input {
+    width: 248px;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 1em;
+    border-radius: 3px;
+    border: 0;
+    color: #737373;
+    background: #f0f0f0;
+  }
+  .registerbox input[type="submit"] {
+    width: 100px;
+    margin-bottom: 0;
+    font-size: 1em;
+    color: #fff;
+    background: #3abf8b;
+  }
+    .registerbox input[type="submit"]:hover {
+      background: #0f9d58;
+    }
+
+/* USERS */
+.listusers {}
+
+/* CONTACTS */
+.contacts {}
+
+/* ADD CONTACT */
+.addcontact {}
+
+/* PROFILE */
+.profile {}
+  .profile .remove {
+    display: block;
+    width: 125px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1em;
+    text-align: center;
+    border-radius: 3px;
+    border: 0;
+    color: #fff;
+    background: #db4437;
+  }
+    .profile .remove:hover {
+      background: #b82f23;
+    }

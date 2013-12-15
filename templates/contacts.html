@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <div class="box contacts">
+    <h2>Contactos</h2>
+    <ul>
+      {% for contact in contacts %}
+        <li>{{ contact.firstname }} {{ contact.lastname }} - <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}

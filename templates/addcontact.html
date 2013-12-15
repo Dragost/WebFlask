@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <div class="box addcontact">
+    <h2>Añadir contacto</h2>
+
+    {% for message in form.firstname.errors %}
+      <div class="error">{{ message }}</div>
+    {% endfor %}
+
+    {% for message in form.lastname.errors %}
+      <div class="error">{{ message }}</div>
+    {% endfor %}
+
+    {% for message in form.email.errors %}
+      <div class="error">{{ message }}</div>
+    {% endfor %}
+
+    <div class="formbox">
+      <form action="{{ url_for('addcontact') }}" method=post>
+        {{ form.hidden_tag() }}
+
+        {{ form.firstname.label }}
+        {{ form.firstname }}
+
+        {{ form.lastname.label }}
+        {{ form.lastname }}
+
+        {{ form.email.label }}
+        {{ form.email }}
+
+        {{ form.submit }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

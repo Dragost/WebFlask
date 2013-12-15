@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  {% for message in form.email.errors %}
+    <div class="error">{{ message }}</div>
+  {% endfor %}
+
+  {% for message in form.password.errors %}
+    <div class="error">{{ message }}</div>
+  {% endfor %}
+
+  <div class="loginbox">
+    <form action="{{ url_for('signin') }}" method=post>
+      {{ form.hidden_tag() }}
+
+      {{ form.email.label }}
+      {{ form.email }}
+
+      {{ form.password.label }}
+      {{ form.password }}
+
+      {{ form.submit }}
+    </form>
+  </div>
+  <div class="register">
+    {% if 'email' not in session %}
+      <a href="{{ url_for('signup') }}">Crear una cuenta</a>
+    {% endif %}
+  </div>
+{% endblock %}

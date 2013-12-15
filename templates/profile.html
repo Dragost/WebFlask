@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <div class="box profile">
+    <h2>Perfil</h2>
+    {% for message in form.firstname.errors %}
+      <div class="error">{{ message }}</div>
+    {% endfor %}
+
+    {% for message in form.lastname.errors %}
+      <div class="error">{{ message }}</div>
+    {% endfor %}
+
+    {% for message in form.password.errors %}
+      <div class="error">{{ message }}</div>
+    {% endfor %}
+
+    <div class="formbox">
+      <form action="{{ url_for('profile') }}" method=post>
+        {{ form.hidden_tag() }}
+
+        {{ form.firstname.label }}
+        {{ form.firstname }}
+
+        {{ form.lastname.label }}
+        {{ form.lastname }}
+
+        {{ form.password.label }}
+        {{ form.password }}
+
+        {{ form.submit }}
+      </form>
+    </div>
+    <a class="remove" href="{{ url_for('removeacc') }}">Eliminar cuenta</a>
+  </div>
+{% endblock %}

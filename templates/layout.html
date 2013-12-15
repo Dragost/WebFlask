@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <title>Web Flask | Gabriel Longás</title>
+
+  <meta charset="utf-8">
+  <meta name="description" content="Web creada en Python usando Flask">
+  <meta name="author" content="Gabriel Longás">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="title"><a href="{{ url_for('signin') }}">Web Flask</a></h1>
+        <nav class="menu">
+          <ul>
+            {% if 'email' in session %}
+            <li><a href="{{ url_for('addcontact') }}">Añadir contacto</a></li>
+            <li><a href="{{ url_for('profile') }}">Perfil</a></li>
+            {% endif %}
+            <li><a href="{{ url_for('about') }}">Sobre</a></li>
+            <li><a href="{{ url_for('users') }}">Lista de usuarios</a></li>
+            <li><a href="{{ url_for('contact') }}">Contacto</a></li>
+            {% if 'email' in session %}
+            <li class="exit"><em>{{ session['email'] }}</em> - <a href="{{ url_for('signout') }}">Salir</a></li>
+            {% endif %}
+          </ul>
+        </nav>
+    </header>
+
+    <div class="body">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </div>
+</body>
+</html>
